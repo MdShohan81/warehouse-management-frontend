@@ -21,6 +21,9 @@ const Header = () => {
                     <Nav.Link href="#pricing">Add Product</Nav.Link>
                     <Nav.Link href="#pricing">My Item</Nav.Link>
                     </Nav>
+                    <Nav className='ms-auto'>
+                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
                 </Container>
                 </Navbar>

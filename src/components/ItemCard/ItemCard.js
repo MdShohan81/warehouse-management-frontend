@@ -9,12 +9,12 @@ const ItemCard = (props) => {
             <img src={picture} alt="images" className='item-img'/>
             <div className="card-body">
                 <div className='d-flex justify-content-around'>
-                <p>Price: <b>{price}</b></p>
-                <p>quantity: <b>{quantity}</b></p>
-                </div>
-                <div className='d-flex justify-content-around'>
                 <p>ItemName: <b>{ServiceName}</b></p>
                 <p>Name: <b>{name}</b></p>
+                </div>
+                <div className='d-flex justify-content-around'>
+                <p>Price: <b>{price}</b></p>
+                <p>quantity: <b>{quantity}</b></p>
                 </div>
                 
                 <p>{reviewText}</p>
