@@ -13,10 +13,17 @@ const Register = () => {
     //react firebase hooks create new user
     const [
         createUserWithEmailAndPassword,
-       
+        user,
+        loading,
+        error,
       ] = useCreateUserWithEmailAndPassword(auth);
+
     const loginRegister = event =>{
         navigate('login');
+    }
+
+    if(user){
+        navigate('/')
     }
     //get user sign value and submit
     const registerHandleSubmit = event => {
@@ -24,9 +31,8 @@ const Register = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-
         createUserWithEmailAndPassword(email, password);
-        console.log(name, email,password);
+        
 
     }
     return (
