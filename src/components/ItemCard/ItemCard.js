@@ -1,8 +1,14 @@
 import React from 'react';
 import './ItemCard.css';
+import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const ItemCard = (props) => {
-    const {name,picture,price,quantity,ServiceName, reviewText} = props.item;
+    const {_id,name,picture,price,quantity,ServiceName, reviewText} = props.item;
+    const navigate = useNavigate();
+    const navigateToUpdate = id =>{
+        navigate(`product/${_id}`)
+    }
     return (
         <div>
             <div className='card'>
@@ -18,7 +24,7 @@ const ItemCard = (props) => {
                 </div>
                 
                 <p>{reviewText}</p>
-                <button className='btn btn-danger'>Update</button>
+                <Button onClick={() => navigateToUpdate(_id)} variant="primary">update</Button>
             </div>
             </div>
         </div>
