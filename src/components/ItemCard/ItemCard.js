@@ -7,7 +7,7 @@ const ItemCard = (props) => {
     const {_id,name,picture,price,quantity,ServiceName, reviewText} = props.item;
     const navigate = useNavigate();
     const navigateToUpdate = id =>{
-        navigate(`product/${id}`)
+        navigate(`/inventory/${id}`)
     }
     return (
         <div>
