@@ -23,14 +23,13 @@ const Header = () => {
                     <Nav className="me-auto">
                     <Nav.Link as={Link} to="/items">All Item</Nav.Link>
                     <Nav.Link href="#pricing">Blog</Nav.Link>
-                    
-                    <Nav.Link href="#pricing">My Item</Nav.Link>
                     </Nav>
                     <Nav className='ms-auto'>
                     
                     {  
                         user ?
                         <>
+                        <Nav.Link as={Link} to='/myitem'>My Item</Nav.Link>
                         <Nav.Link as={Link} to='/addproduct'>Add Product</Nav.Link>
                         <p><button className='text-decoration-none btn' to="/signout" onClick={handleSignOut}>Sign out</button></p>
                         </> 
