@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../Social/Social';
 
 
 
@@ -53,6 +54,8 @@ const Login = () => {
         if(email){
             await sendPasswordResetEmail(email);
             toast('sent email check your inbox')
+        }else{
+            toast('please put your email')
         }
     }
     
@@ -80,6 +83,7 @@ const Login = () => {
                     <p>New to Carspot? <Link className='text-primary text-decoration-none' onClick={navigateRegister}   to='/register'>Register here</Link></p>
                     <p>Forget Password? <Button  className='text-danger pe-auto text-decoration-none' variant='Link' onClick={ resetPassword }>Forget Password</Button></p>
                     <ToastContainer></ToastContainer>
+                    <Social></Social>
                 </div>
             </div>
             

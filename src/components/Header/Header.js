@@ -15,9 +15,6 @@ const Header = () => {
         signOut(auth)
     }
     return (
-        <div className='container'>
-            <div className="row">
-                <div className="col-md-12">
                 <Navbar collapseOnSelect expand="lg" sticky='top' bg="light" variant="light">
                 <Container>
                 <Navbar.Brand as={Link} to="/"><img src={logo} alt="" className='brand'/></Navbar.Brand>
@@ -44,10 +41,6 @@ const Header = () => {
                 </Navbar.Collapse>
                 </Container>
                 </Navbar>
-                </div>
-            </div>
-        </div>
     );
 };
-
 export default Header;
