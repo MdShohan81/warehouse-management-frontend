@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddProduct from './components/AddProduct/AddProduct';
 import Blog from './components/Blog/Blog';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import Home from './components/Home/Home';
 import InventoryItem from './components/InventoryItem/InventoryItem';
@@ -35,6 +36,7 @@ function App() {
             <Route path='/blog' element={<Blog></Blog>}></Route>
             <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
+        <Footer></Footer>
     </div>
   );
 }
