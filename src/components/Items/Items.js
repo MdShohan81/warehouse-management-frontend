@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import useItem from '../../hooks/useItem';
 
 const Items = () => {
@@ -16,7 +17,8 @@ const Items = () => {
             .then(data => {
                 console.log(data);
                 const remaining = items.filter(item => item._id !== id);
-                setItems(remaining)
+                setItems(remaining);
+                toast('Delete Successfully')
             })
         }
     }
@@ -42,6 +44,7 @@ const Items = () => {
         
             </div>
             <Link to="/addproduct"><button className='btn btn-primary my-3'> Add New Item</button></Link>
+            <ToastContainer></ToastContainer>
         </div>
     </div>
     );

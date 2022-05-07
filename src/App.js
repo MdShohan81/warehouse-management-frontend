@@ -9,6 +9,7 @@ import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import Myitem from './components/MyItem/Myitem';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/register' element={<Register></Register>}></Route>
             <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
             <Route path='myitem' element={<Myitem></Myitem>}></Route>
+            <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
     </div>
   );
