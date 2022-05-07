@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import useItemDetails from '../../hooks/useItemDetails';
 
 const InventoryItem = () => {
     const { inventoryId } = useParams();
-    const [item, setItem] = useState({});
-    useEffect(() => {
-        const url =  `http://localhost:5000/product/${inventoryId}`;
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setItem(data))
-    }, []);
+   const [item] = useItemDetails(inventoryId)
 
     //handle item reduce quantity
    const handleReduceQuantity = () =>{
@@ -58,7 +53,7 @@ const InventoryItem = () => {
 
     return (
         <div className='container'>
-            <div className="row">
+            <div className="row mx-none">
                 <h2 className='text-center my-3'>Items Name: {item.ServiceName}</h2>
                 <div className="col-md-8">
                 <div className="card mb-3">
@@ -76,6 +71,8 @@ const InventoryItem = () => {
                         <span className='card-title'>Description:</span>
                         <p className="card-text"><small>{item.reviewText}</small></p>
                         <button onClick={handleReduceQuantity} className='btn btn-danger'>Delivered</button>
+                        <Link to={`/checkout/${inventoryId}`}><button className='btn btn-danger my-3 ms-5'>proceed checkout</button></Link>
+                        
                     </div>
                     </div>
                 </div>

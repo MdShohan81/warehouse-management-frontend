@@ -11,9 +11,9 @@ const Footer = () => {
                     <div className="row">
                     <div className="col-6 col-md-4">
                             <p><img src={logo} alt="" className='img-fluid'/></p>
-                            <p>For questions about the TrueCar Auto Buying Service please call 1-888-878-3227.
-                                Certified Dealers are contractually obligated by TrueCar to meet certain customer service requirements and complete the TrueCar Dealer Certification Program.
-                                TrueCar does not broker, sell, or lease motor vehicles. Unless otherwise noted, all vehicles shown on this website are offered for sale by licensed motor vehicle dealers. All vehicles are subject to prior sale. By accessing this website, you agree to the TrueCar Terms of Service and Privacy Policy.</p>
+                            <p>For questions about the carspot Auto Buying Service please call 1-888-878-3227.
+                                Certified Dealers are contractually obligated by carspot to meet certain customer service requirements and complete the carspot Dealer Certification Program.
+                                carspot does not broker, sell, All vehicles are subject to prior sale. By accessing this website, you agree to the carspot Terms of Service and Privacy Policy.</p>
                         </div>
                         <div className="col-6 col-md-4">
                             <h4 className='text-center'>CONTACT Us</h4>
@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-10 mx-auto">
-                <p className='text-center'>© 2022 GIMNAS. All Rights Reserved.</p>
+                <p className='text-center'>© 2022 Carspot. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

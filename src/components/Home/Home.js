@@ -13,14 +13,14 @@ const Home = () => {
                     <div className="container">
                         <div className="row">  
                             <h3 className='text-center my-5'>Our Service</h3>  
-                            <div className="col-md-12 item-container">
+                            <div className="col-md-12  item-container">
                         {
                             items.slice(0,6).map(item => <ItemCard key={item._id}
                             item={item}
                             ></ItemCard>)
                         }
                             </div>
-                            <Link to="/manageinventory"><button className='btn btn-primary my-3'> More Inventory</button></Link>
+                            <Link to="/manageinventory"><button className='btn btn-danger my-3'> More Inventory</button></Link>
                         </div>
                     </div>
                 </div>

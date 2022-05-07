@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Social from '../Social/Social';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
     const nameRef = useRef('');
@@ -33,7 +34,8 @@ const Register = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         createUserWithEmailAndPassword(email, password);
-        
+        event.target.reset();
+        toast('send verify email')
 
     }
     return (
@@ -61,6 +63,7 @@ const Register = () => {
                 </Form>
                 <p>Already have account <Link className='text-primary text-decoration-none' onClick={loginRegister}  to='/login'>Login here</Link></p>
                 <Social></Social>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
         
