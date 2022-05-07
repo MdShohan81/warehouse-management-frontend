@@ -12,17 +12,12 @@ const ItemCard = (props) => {
     return (
         <div>
             <div className='card'>
-            <img src={picture} alt="images" className='item-img'/>
+            <img src={picture}  alt="images" className='img-fluid'/>
             <div className="card-body">
-                <div className='d-flex justify-content-around'>
-                <p>ItemName: <b>{ServiceName}</b></p>
-                <p>Name: <b>{name}</b></p>
-                </div>
-                <div className='d-flex justify-content-around'>
-                <p>Price: <b>{price}</b></p>
-                <p>quantity: <b>{quantity}</b></p>
-                </div>
-                
+                <p>ItemName: <b className='text-danger'>{ServiceName}</b></p>
+                <p>Name: <b className='text-danger'>{name}</b></p>
+                <p>Price: <b className='text-danger'>${price}</b></p>
+                <p>quantity: <b className='text-danger'>{quantity}</b></p>
                 <p>{reviewText}</p>
                 <Button onClick={() => navigateToUpdate(_id)} variant="primary">update</Button>
             </div>

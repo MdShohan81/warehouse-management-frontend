@@ -17,8 +17,8 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result);
-            
             toast('item added successfully');
+            
         })
     };
     
