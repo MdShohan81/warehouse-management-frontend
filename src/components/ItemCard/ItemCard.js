@@ -19,7 +19,7 @@ const ItemCard = (props) => {
                 <p>Price: <b className='text-danger'>${price}</b></p>
                 <p>quantity: <b className='text-danger'>{quantity}</b></p>
                 <p>{reviewText}</p>
-                <Button onClick={() => navigateToUpdate(_id)} variant="primary">update</Button>
+                <Button onClick={() => navigateToUpdate(_id)} variant="danger">update</Button>
             </div>
             </div>
         </div>

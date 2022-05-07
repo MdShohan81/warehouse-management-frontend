@@ -43,7 +43,7 @@ const Items = () => {
         }
         
             </div>
-            <Link to="/addproduct"><button className='btn btn-primary my-3'> Add New Item</button></Link>
+            <Link to="/addproduct"><button className='btn btn-danger my-3'> Add New Item</button></Link>
             <ToastContainer></ToastContainer>
         </div>
     </div>

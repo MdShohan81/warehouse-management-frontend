@@ -13,6 +13,7 @@ const InventoryItem = () => {
         .then(data => setItem(data))
     }, []);
 
+    //handle item reduce quantity
    const handleReduceQuantity = () =>{
        const quantity = parseInt(item.quantity) - 1;
        const updateQuantity = { quantity };
@@ -31,11 +32,34 @@ const InventoryItem = () => {
            
        });
    }
-    
+
+   // re stoke product
+   const handleUpdateQuantity = event => {
+       event.preventDefault();
+       const quantity = event.target.quantity.value;
+       const newQantity = {quantity};
+       const url = `http://localhost:5000/product/${inventoryId}`;
+       fetch(url, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(newQantity)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log('success', data);
+        alert('quantity added successfully');
+        
+    });
+
+   }
+
+
     return (
         <div className='container'>
             <div className="row">
-                <h2>Items Name: {item.ServiceName}</h2>
+                <h2 className='text-center my-3'>Items Name: {item.ServiceName}</h2>
                 <div className="col-md-8">
                 <div className="card mb-3">
                 <div className="row g-0">
@@ -59,13 +83,11 @@ const InventoryItem = () => {
                 <ToastContainer></ToastContainer>
                 </div>
                 <div className="col-md-4">
-                <Form>
+                <Form onSubmit={handleUpdateQuantity}>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control type="number" name="quantity" placeholder="quantity" required/>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        ReStoke
-                    </Button>
+                    <button className='btn btn-danger'>Restoke</button>
                 </Form>
                 </div>
             </div>

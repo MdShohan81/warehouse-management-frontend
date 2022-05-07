@@ -25,7 +25,7 @@ const AddProduct = () => {
    
     return (
         <div className='w-50 mx-auto'>
-            <h1 className='text-center'>Add Product</h1>
+            <h1 className='text-center my-3'>Add Product</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
             <input className='mb-3' placeholder='Product Name' {...register("ServiceName", { required: true, maxLength: 20 })} />
             <input className='mb-3' placeholder='Supplier Name' {...register("name")} />
