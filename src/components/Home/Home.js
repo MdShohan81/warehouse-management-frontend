@@ -19,8 +19,8 @@ const Home = () => {
                             item={item}
                             ></ItemCard>)
                         }
-                        <Link to="/items"><button className='btn btn-danger'>More Items</button></Link>
                             </div>
+                            <Link to="/manageinventory"><button className='btn btn-primary my-3'> More Inventory</button></Link>
                         </div>
                     </div>
                 </div>
