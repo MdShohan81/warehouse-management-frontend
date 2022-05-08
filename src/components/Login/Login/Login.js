@@ -68,7 +68,7 @@ const Login = () => {
         <div className='container'>
             <div className="row">
             <h1 className='text-center my-5'>Please Login here</h1>
-                <div className="col-md-12 col-sm-12 col-12 w-50 mx-auto">
+                <div className="col-md-12 col-sm-12 col-12 w-75 mx-auto">
                     <Form onSubmit={loginHandleSubmit}>
                     {errorMessages}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -87,8 +87,8 @@ const Login = () => {
                     <p>New to Carspot? <Link className='text-primary text-decoration-none' onClick={navigateRegister}   to='/register'>Register here</Link></p>
                     <p>Forget Password? <Button  className='text-danger pe-auto text-decoration-none' variant='Link' onClick={ resetPassword }>Forget Password</Button></p>
                     <ToastContainer></ToastContainer>
-                    <Social></Social>
                 </div>
+                <Social></Social>
             </div>
             
         </div>
