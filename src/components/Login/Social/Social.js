@@ -24,13 +24,13 @@ const Social = () => {
     return (
         <div className='container'>
             <div className="row">
-                <div className="d-flex align-items-center w-100 col-md-12">
+                <div className="d-flex align-items-center w-100 col-md-12 col-12">
                 <div style={{height: '1px'}} className='bg-danger w-50'></div>
                     <p className='mt-2 px-2'>or</p>
                     <div style={{height: '1px'}} className='bg-danger w-50'></div>
                 </div>
                 {errorMessages}
-                <div className="col-md-12 text-center mx-auto">
+                <div className="col-md-12 col-12 text-center mx-auto">
                     <button onClick={() => signInWithGoogle()} className='btn btn-danger text-light py-2 fs-5 w-75'>LogIn With Google</button>
                 </div>
             </div>

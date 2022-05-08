@@ -26,7 +26,7 @@ const Items = () => {
         <div className="container">
         <div className="row">  
             <h3 className='text-center my-5'>Our Items</h3>  
-            <div className="col-md-12 item-container">
+            <div className="col-md-12 col-12 item-container">
         {
             items.map(item => <div className='card' key={item._id}>
             <img src={item.picture} className='img-fluid' alt="img" />

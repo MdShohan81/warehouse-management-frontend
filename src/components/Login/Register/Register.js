@@ -42,7 +42,7 @@ const Register = () => {
         <div className='container'>
         <div className="row">
         <h1 className='text-center my-5'>Please Register here</h1>
-            <div className="col-md-12 w-50 mx-auto">
+            <div className="col-md-12 col-12 w-75 mx-auto">
                 <Form onSubmit={registerHandleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Your name</Form.Label>

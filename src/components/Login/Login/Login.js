@@ -68,7 +68,7 @@ const Login = () => {
         <div className='container'>
             <div className="row">
             <h1 className='text-center my-5'>Please Login here</h1>
-                <div className="col-md-12 w-50 mx-auto">
+                <div className="col-md-12 col-sm-12 col-12 w-50 mx-auto">
                     <Form onSubmit={loginHandleSubmit}>
                     {errorMessages}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
