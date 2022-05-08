@@ -12,7 +12,7 @@ const InventoryItem = () => {
    const handleReduceQuantity = () =>{
        const quantity = parseInt(item.quantity) - 1;
        const updateQuantity = { quantity };
-       const url = `http://localhost:5000/product/${inventoryId}`;
+       const url = `https://damp-scrubland-08522.herokuapp.com/product/${inventoryId}`;
        fetch(url, {
            method: 'PUT',
            headers: {
@@ -33,7 +33,7 @@ const InventoryItem = () => {
        event.preventDefault();
        const quantity = event.target.quantity.value;
        const newQantity = {quantity};
-       const url = `http://localhost:5000/product/${inventoryId}`;
+       const url = `https://damp-scrubland-08522.herokuapp.com/product/${inventoryId}`;
        fetch(url, {
         method: 'PUT',
         headers: {
