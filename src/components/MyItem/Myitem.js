@@ -8,7 +8,7 @@ import auth from '../../firebase.init';
 const Myitem = () => {
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     useEffect( () => {
         const getOrders = async() =>{
             const email = user.email;

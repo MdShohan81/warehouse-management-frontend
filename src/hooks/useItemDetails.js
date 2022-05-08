@@ -8,7 +8,7 @@ const useItemDetails = inventoryId =>{
         .then(res => res.json())
         .then(data => setItem(data))
     }, [inventoryId]);
-    return  [item]
+    return  [item,setItem]
 }
 
 export default useItemDetails;
