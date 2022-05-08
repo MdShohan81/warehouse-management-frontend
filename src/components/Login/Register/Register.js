@@ -62,9 +62,9 @@ const Register = () => {
                 </Button>
                 </Form>
                 <p>Already have account <Link className='text-primary text-decoration-none' onClick={loginRegister}  to='/login'>Login here</Link></p>
-                <Social></Social>
                 <ToastContainer></ToastContainer>
             </div>
+            <Social></Social>
         </div>
         
     </div>
