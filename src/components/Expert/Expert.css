@@ -1,0 +1,26 @@
+.cars-expert{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media screen and (max-width: 912px) {
+    .cars-expert{
+        grid-template-columns: repeat(1, 1fr);  
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cars-expert{
+        grid-template-columns: repeat(1, 1fr);  
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .cars-expert{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .expert-left{
+        order: 2;
+    }
+}

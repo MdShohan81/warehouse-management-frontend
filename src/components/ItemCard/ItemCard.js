@@ -18,7 +18,7 @@ const ItemCard = (props) => {
                 <p>Name: <b className='text-danger'>{name}</b></p>
                 <p>Price: <b className='text-danger'>${price}</b></p>
                 <p>quantity: <b className='text-danger'>{quantity}</b></p>
-                <p>{reviewText}</p>
+                <p>{reviewText.slice(0, 50)}</p>
                 <Button onClick={() => navigateToUpdate(_id)} variant="danger">update</Button>
             </div>
             </div>

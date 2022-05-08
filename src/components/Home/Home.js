@@ -4,6 +4,8 @@ import useItem from '../../hooks/useItem'
 import Banner from '../Banner/Banner'
 import ItemCard from '../ItemCard/ItemCard';
 import { Link } from 'react-router-dom';
+import ClientReview from '../ClientReview/ClientReview';
+import Expert from '../Expert/Expert';
 
 const Home = () => {
     const [items, setItems] = useItem();
@@ -23,7 +25,9 @@ const Home = () => {
                             <Link to="/manageinventory"><button className='btn btn-danger my-3'> More Inventory</button></Link>
                         </div>
                     </div>
-                </div>
+                <Expert></Expert>
+                <ClientReview></ClientReview>
+        </div>
     );
 };
 
